@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+   --main-bg-color: #d3e2f2;
+   --secondary-bg-color: #b9cfe8;
+   --accent-color: #4a5989;
+   --text-color: #f6f2ee;
+   --description-bg-color: #eeeeee;
+}
+
+.container {
+   border-radius: 5px;
+   background: var(--secondary-bg-color);
+   padding: 30px;
+   margin: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card,
+.cardContainer {
+   background: var(--main-bg-color);
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+.card {
+   width: 350px;
+   height: 350px;
+}
+
+.card p {
+   font-size: 200px;
+   font-weight: 400;
+   margin: auto;
+}
+
+.secondItems {
+   width: 80%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 40px;
+}
+
+.cardContainer {
+   width: 250px;
+   height: 250px;
+   justify-content: space-between;
+}
+
+.cardContainer p {
+   font-size: 30px;
+   font-weight: 400;
+   margin: auto;
+}
+
+h3 {
+   color: var(--text-color);
+   padding: 1em;
+   background: var(--accent-color);
+}
+
+h4 {
+   font-size: 12px;
+   font-weight: normal;
+   padding: 1em;
+   text-align: left;
+   background: var(--description-bg-color);
+}

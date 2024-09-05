@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Key Event Information</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="card">
+         <h1 id="innerH1"></h1>
+         <p id="innerKeyCode"></p>
+         <h2>Key Code Information</h2>
+      </div>
+
+      <div class="secondItems">
+         <div class="cardContainer">
+            <h3>event.key</h3>
+            <p id="innerKey"></p>
+            <h4>The value of the key pressed. Accounts for modifiers keys that return CAPS and alternate chars.</h4>
+         </div>
+
+         <div class="cardContainer">
+            <h3>event.location</h3>
+            <p id="innerLocation"></p>
+            <h4>Some keys exist more than once on your keyboard. This provides the location of the key pressed. Try it
+               with both shifts.</h4>
+         </div>
+
+         <div class="cardContainer">
+            <h3>event.code</h3>
+            <p id="innerCode"></p>
+            <h4>The physical key on the keyboard. Doesn't care if you are holding a modifier like Shift.</h4>
+         </div>
+
+         <div class="cardContainer">
+            <h3>event.which</h3>
+            <p id="innerWhich"></p>
+            <h4>event.which and event.keyCode are deprecated in modern browsers. Use .key or .code instead.</h4>
+         </div>
+      </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
