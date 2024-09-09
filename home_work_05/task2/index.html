@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Phoro Card</title>
+   <style>
+      .square {
+         width: 100px;
+         height: 100px;
+         border: 2px solid black;
+         margin-bottom: 10px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <div id="square1" class="square"></div>
+   <div id="square2" class="square"></div>
+   <div id="square3" class="square"></div>
+
+   <input id="color" type="color">
+   <button onclick="changeColor(square1, 'square1')">square1</button>
+   <button onclick="changeColor(square2, 'square2')">square2</button>
+   <button onclick="changeColor(square3, 'square3')">square3</button>
+
+   <script>
+      let square1 = document.getElementById('square1');
+      let square2 = document.getElementById('square2');
+      let square3 = document.getElementById('square3');
+
+      function changeColor(elem, squareId) {
+         const color = document.getElementById('color').value;
+         elem.style.backgroundColor = color;
+         localStorage.setItem(squareId, color);
+      }
+
+      function loadColors() {
+         const color1 = localStorage.getItem('square1');
+         const color2 = localStorage.getItem('square2');
+         const color3 = localStorage.getItem('square3');
+
+         if (color1) square1.style.backgroundColor = color1;
+         if (color2) square2.style.backgroundColor = color2;
+         if (color3) square3.style.backgroundColor = color3;
+      }
+
+      window.onload = loadColors;
+   </script>
+
+</body>
+
+</html>
