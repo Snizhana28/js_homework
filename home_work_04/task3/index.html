@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Геолокація</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 20px;
+      }
+
+      #location {
+         font-size: 1.2em;
+         font-weight: bold;
+         color: #333;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Координати</h1>
+   <div id="location"></div>
+
+   <script>
+      function updateLocation() {
+         navigator.geolocation.getCurrentPosition(
+            function (position) {
+               const latitude = position.coords.latitude;
+               const longitude = position.coords.longitude;
+               document.getElementById('location').textContent = `Широта: ${latitude.toFixed(6)}, Довгота: ${longitude.toFixed(6)}`;
+            },
+            function (error) {
+               document.getElementById('location').textContent = 'Не вдалося отримати координати.';
+               console.error('Error getting location:', error);
+            }
+         );
+      }
+
+      setInterval(updateLocation, 5000);
+      window.onload = updateLocation;
+   </script>
+</body>
+
+</html>

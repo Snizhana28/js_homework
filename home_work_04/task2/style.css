@@ -1,0 +1,34 @@
+.language-container {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 0;
+   margin: 0;
+}
+
+.language-item {
+   font-size: 18px;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+   background-color: #f9f9f9;
+   transition: background-color 0.3s, border-color 0.3s;
+}
+
+.language-item:hover {
+   background-color: #e0e0e0;
+   border-color: #ccc;
+}
+
+.main-language {
+   font-weight: bold;
+   color: #333;
+   background-color: #d3ffd3;
+   border-color: #a0e0a0;
+}
+
+h1 {
+   font-size: 24px;
+   margin-bottom: 20px;
+   color: #444;
+}

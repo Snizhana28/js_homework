@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Перелік мов</title>
+</head>
+
+<body>
+   <h1>Перелік встановлених мов у системі</h1>
+   <div id="languageList" class="language-container"></div>
+
+   <script>
+      function displayLanguages() {
+         const languages = navigator.languages;
+         const languageList = document.getElementById('languageList');
+
+         languages.forEach((language, index) => {
+            const divItem = document.createElement('div');
+            divItem.className = 'language-item';
+
+            if (index === 0) {
+               divItem.classList.add('main-language');
+            }
+
+            divItem.textContent = language;
+            languageList.appendChild(divItem);
+         });
+      }
+
+      window.onload = displayLanguages;
+   </script>
+</body>
+
+</html>
