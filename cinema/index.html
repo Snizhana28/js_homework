@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/film.css">
+    <link rel="stylesheet" href="css/st.css">
+    <link rel="stylesheet" href="css/modal_view.css">
+    <title>Films</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="./img/logo.png" alt="none" class="header_logo">
+        <ul class="menu_bar">
+            <a>MAIN</a>
+            <a href="">ABOUT</a>
+            <a id="sort_mode_btn">SORT</a>
+            <a id="edit_mode_btn">EDIT MODE</a>
+        </ul>
+    </div>
+
+
+    <div id="filter" class="filter">
+        <div id="options" class="options">
+            <span>sort by:</span>
+            <a id="sort_by_year" class="read_more">year</a>
+            <span></span>
+            <!--            <a id="sort_by_name" class="read_more">name</a>-->
+            <!--            <span></span>-->
+            <a id="sort_by_rate" class="read_more">rate</a>
+            film <span></span>
+            <input id="search_query" type="text" placeholder="actor">
+            <a class="read_more">search</a>
+        </div>
+    </div>
+    <div class="film_div" id="container_div">
+    </div>
+    <!--    <div class="content_menu">-->
+
+    <!--        <div class="one_film">-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div id="film_modal" class="modal">
+        <div class="modal_content">
+            <img id="modal_img" src="" alt="Film Image">
+            <div class="modal_text">
+                <span class="close_modal">&times;</span>
+                <h2 id="modal_title"></h2>
+                <p id="modal_type"></p>
+                <p id="modal_year"></p>
+                <p id="modal_score"></p>
+                <p id="modal_actors"></p>
+                <p id="modal_description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <!--    <script type="text/javascript" src="./js/header.js"></script>-->
+</body>
+
+</html>
