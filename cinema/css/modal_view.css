@@ -36,18 +36,21 @@
    flex-grow: 1;
 }
 
-.modal h2 {
+.modal h2,
+.modal_text h2 {
    margin: 0;
    font-size: 24px;
    color: black;
 }
 
-.modal p {
+.modal p,
+.modal_text label {
    margin: 8px 0;
    color: black;
 }
 
-.close_modal {
+.close_modal,
+.close_edit_modal {
    position: absolute;
    top: 10px;
    right: 20px;
@@ -58,8 +61,43 @@
 }
 
 .close_modal:hover,
-.close_modal:focus {
+.close_modal:focus,
+.close_edit_modal:hover,
+.close_edit_modal:focus {
    color: black;
    text-decoration: none;
    cursor: pointer;
+}
+
+#save_edit {
+   background-color: #D68D2C;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 15px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   width: 150px;
+   margin: 0 auto;
+}
+
+#save_edit:hover {
+   background-color: #c07b24;
+}
+
+.modal_text input,
+.modal_text textarea {
+   width: 100%;
+   padding: 8px;
+   margin-top: 5px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 14px;
+}
+
+.modal_text textarea {
+   resize: vertical;
+   min-height: 100px;
 }
